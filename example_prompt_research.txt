@@ -1,0 +1,17 @@
+Extract metadata from research papers or academic documents.
+
+For each paper found, extract:
+- "title" (string, paper title)
+- "authors" (string, comma-separated list of author names)
+- "year" (integer, publication year)
+- "abstract" (string, brief abstract or summary, max 200 chars)
+- "keywords" (string, comma-separated list of keywords or topics)
+- "doi" or "url" (string, DOI or URL if present)
+
+Return ONLY a JSON array of objects matching this structure, with no extra text or markdown.
+
+Example output format:
+[
+  {"title": "Deep Learning for Image Classification", "authors": "Smith, J., Johnson, K.", "year": 2023, "abstract": "This paper presents a novel CNN architecture...", "keywords": "deep learning, CNNs, image classification", "doi": "10.1234/example.doi"},
+  {"title": "Quantum Computing Advances", "authors": "Chen, W.", "year": 2024, "abstract": "Recent developments in quantum error correction...", "keywords": "quantum computing, error correction", "doi": "10.5678/example.doi"}
+]

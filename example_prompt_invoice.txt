@@ -1,0 +1,18 @@
+Extract invoice data from the provided document.
+
+For each invoice or transaction found, extract:
+- "invoice_number" (string, e.g., "INV-2024-001")
+- "date" (string, ISO format YYYY-MM-DD)
+- "vendor" or "supplier" (string, company name)
+- "amount" (float, numeric value without currency symbols)
+- "currency" (string, e.g., "USD", "EUR")
+- "description" (string, brief description of items or services)
+- "status" (string, e.g., "paid", "pending", "overdue")
+
+Return ONLY a JSON array of objects matching this structure, with no extra text or markdown.
+
+Example output format:
+[
+  {"invoice_number": "INV-2024-001", "date": "2024-01-15", "vendor": "Acme Corp", "amount": 1500.00, "currency": "USD", "description": "Software licenses", "status": "paid"},
+  {"invoice_number": "INV-2024-002", "date": "2024-01-20", "vendor": "Tech Supplies Inc", "amount": 275.50, "currency": "USD", "description": "Office equipment", "status": "pending"}
+]
